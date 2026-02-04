@@ -1,0 +1,9 @@
+:root {
+  --primary: #4f46e5;
+  --secondary: #22c55e;
+  --bg-dark: #0f172a;
+}
+
+body {
+  background: linear-gradient(180deg, #0f172a, #020617);
+}
