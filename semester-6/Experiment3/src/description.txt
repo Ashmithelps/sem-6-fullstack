@@ -1,0 +1,10 @@
+
+ React Portfolio Website using Router and Bootstrap
+This experiment focuses on developing a modern and responsive multi-page portfolio website using React.js with React Router and Bootstrap. The main objective is to understand component-based architecture, routing between pages, and designing professional user interfaces using UI libraries.
+
+The application consists of two main pages: a Home page and a Projects page. The Home page contains a hero section introducing the developer along with skills and basic information, while the Projects page displays project cards with descriptions. Navigation between pages is implemented using React Router without reloading the browser, creating a smooth Single Page Application (SPA) experience.
+
+Reusable components such as Navbar, Footer, Hero Section, and Project Cards are created to maintain modularity and code reusability. Bootstrap is used for responsive layout, grid system, and styling to ensure proper spacing, typography, and mobile compatibility.
+
+This experiment helps in learning routing, component structuring, responsive design, and building real-world React applications.
+
