@@ -1,0 +1,9 @@
+This experiment involves developing a responsive personal portfolio website using React. The main objective is to understand component-based architecture, client-side routing, and dynamic theme management in a single-page application. The project is built using React along with React Router DOM for navigation and Bootstrap for styling and responsiveness.
+
+The application is structured into reusable components such as Navbar, Hero Section, Skills Section, Project Cards, and Footer. React Router is implemented to enable seamless navigation between pages like Home and Projects without reloading the browser. This demonstrates the concept of a Single Page Application (SPA).
+
+A key feature of this experiment is the Dark/Light Theme Toggle functionality. Using React’s useState and useEffect hooks, the theme state is managed globally. When the toggle button is clicked, a dark-mode class is dynamically added or removed from the document body, which updates the entire website’s appearance through CSS.
+
+Custom CSS is used to design a gradient hero section, styled skill boxes, interactive project cards, and a structured footer. Flexbox layout ensures the footer remains at the bottom of the page. Overall, this experiment successfully demonstrates modern frontend development concepts using React.
+
+
