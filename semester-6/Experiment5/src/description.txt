@@ -1,0 +1,29 @@
+Overview
+We extended the existing Experiment 4 React Portfolio project by adding four new features: Redux Toolkit, useContext, useMemo, and a new Reports page — without changing any existing UI or design.
+
+1. Redux Toolkit (Replaces useReducer)
+Previously in Experiment 4, state was managed using useReducer inside AppContext. We replaced that with Redux Toolkit for more scalable and structured state management.
+
+We created two new files for this. First is the store file which acts as the central hub for all Redux state in the app. Second is the appSlice file which defines the favorites feature with three actions — addFavorite which adds a project to the saved list, removeFavorite which removes a specific project, and clearFavorites which wipes the entire list at once.
+
+We then connected Redux to the UI in three places. In ProjectCard, we added a Favorite button that dispatches actions when clicked and reads the current favorites list to show whether a project is already saved. In Analytics, we read the favorites list from Redux and allow the user to remove individual items or clear all. In Reports, we again read the favorites to display them in the summary section.
+
+2. useContext (Global State)
+We already had ThemeContext from Experiment 4 which handled light and dark mode. We updated AppContext to now store a mock user profile containing the user's name, role, and avatar initials instead of the old useReducer logic that was moved to Redux.
+
+This context acts as a global source of user information accessible anywhere in the app without passing props. We used it in at least two components. In the Navbar, it reads the user's name and displays it as the portfolio brand title. In both Analytics and Reports pages, it shows the logged in user's name and role at the top of the page as a personalized greeting.
+
+3. useMemo (Performance Optimization)
+useMemo is a React hook that remembers the result of a calculation and only recomputes it when its dependencies change. We used it in two pages to avoid unnecessary recalculations on every render.
+
+In the Analytics page, useMemo calculates three statistics from the Redux favorites list — the total number of favorites, how many are AI or ML related projects, and how many are other types. This recalculates only when the favorites list actually changes.
+
+In the Reports page, we used useMemo in two places. First to filter the projects list based on whichever category button the user has selected, so the filtering only reruns when the selected filter changes. Second to compute the full report summary including which projects are favorited, how many are completed, how many are in progress, and the overall completion percentage — this only recalculates when the favorites list changes.
+
+4. New Page — Reports
+We added a completely new page accessible via the Reports link in the navbar. This page was specifically built for Experiment 5 and demonstrates all three new features together in one place.
+
+The page shows four summary cards at the top displaying total projects, completed count, in progress count, and how many are favorited — the favorited count comes live from Redux. Below that is a progress bar showing the overall completion percentage of all projects, which is calculated using useMemo. Then there is a filter bar with buttons for All, AI/ML, Full Stack, and Database categories — clicking them filters the project list using useMemo. The project breakdown section lists all projects with colored status badges and highlights any that have been favorited. Finally at the bottom is a Favorited Projects section that pulls data from Redux and shows which projects the user has saved, with an option to clear them all.
+
+5. Other Supporting Changes
+We updated main.jsx to wrap the entire app with the Redux Provider so every component can access the store, and also added the AppProvider wrapper for the user context. We updated App.jsx to include two new routes for the Analytics and Reports pages. We updated the Navbar to include links to all four pages. We also updated package.json to include the two new dependencies, which are @reduxjs/toolkit and react-redux, which need to be installed by running npm install before starting the project.
