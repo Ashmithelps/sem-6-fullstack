@@ -1,0 +1,60 @@
+#  CRUD Operations using Node.js, Express.js & MongoDB
+
+##  Project Overview
+This project demonstrates how to perform **CRUD Operations (Create, Read, Update, Delete)** using a **Node.js and Express.js backend** with **MongoDB** as the database.
+
+It is a RESTful API-based application where users can manage student records efficiently.
+
+---
+
+##  Objective
+- Build REST APIs using Node.js and Express.js
+- Connect backend with MongoDB database
+- Perform CRUD operations
+- Test APIs using Postman
+- Understand routing and backend architecture
+
+---
+
+##  Features
+-  Create new student records
+-  Fetch all students
+-  Fetch single student by ID
+-  Update student details
+-  Delete student record
+
+---
+
+##  Tech Stack
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- Postman
+
+---
+
+##  Project Structure
+experiment10/
+├── server.js
+├── models/
+│   └── Student.js
+├── routes/
+│   └── studentRoutes.js
+├── package.json
+
+---
+
+##  Installation & Setup
+
+###  Clone or Create Project
+bash
+mkdir experiment10
+cd experiment10
+npm init -y
+
+brew services start mongodb-community
+
+node server.js
+
+http://localhost:5000
