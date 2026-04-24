@@ -1,0 +1,27 @@
+# JWT Authentication using Spring Boot
+
+## Features
+- User Login
+- JWT Token Generation
+- Protected Routes
+- Token Validation
+
+## Tech Stack
+- Spring Boot
+- Spring Security
+- JWT
+
+## Endpoints
+
+### Login
+POST /login
+
+### Protected
+GET /protected (Requires Token)
+
+## Testing
+- Postman used
+- Token passed in Authorization header
+
+## Author
+Ashmit Thakur
