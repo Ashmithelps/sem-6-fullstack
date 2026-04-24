@@ -1,0 +1,15 @@
+package com.example.experiment7;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class Experiment7Application {
+
+    public static void main(String[] args) {
+        SpringApplication.run(Experiment7Application.class, args);
+        System.out.println(new org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder().encode("user123"));
+        System.out.println(new org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder().encode("admin123"));
+    }
+
+}
